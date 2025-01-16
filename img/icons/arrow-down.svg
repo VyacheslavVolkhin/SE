@@ -1,0 +1,10 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow-mini" clip-path="url(#clip0_47_150)">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M30 10L15 25L5.96007e-07 10L3.75 6.25L15 17.5L26.25 6.25L30 10Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_47_150">
+<rect width="30" height="30" fill="white" transform="translate(30 30) rotate(180)"/>
+</clipPath>
+</defs>
+</svg>

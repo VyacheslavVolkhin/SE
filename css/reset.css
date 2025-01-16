@@ -84,7 +84,7 @@ video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Futura New', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 body {
@@ -162,11 +162,12 @@ button,
     text-overflow: ellipsis;
     white-space: nowrap;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Futura New', sans-serif;
     -webkit-transition: all ease 0.3s;
     transition: all ease 0.3s;
     text-decoration: none;
 }
+
 select,
 input[type="text"],
 input[type="password"],
@@ -187,7 +188,7 @@ textarea {
   display: block;
   width: 100%;
   outline: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Futura New', sans-serif;
   -webkit-appearance: none;
 }
 select::-ms-clear,

@@ -1,9 +1,9 @@
 
 .ls(@font, @value) {
-	letter-spacing: @font*@value/1000px;
+	letter-spacing: (@font*@value/1000px);
 }
 .lse(@value) {
-	letter-spacing: @value/1000em;
+	letter-spacing: (@value/1000em);
 }
 .t-scale(@value) {
     transform: scale(@value);

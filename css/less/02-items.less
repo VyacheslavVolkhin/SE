@@ -1,0 +1,234 @@
+/* ----------------------------------- *\
+			items styles
+\* ----------------------------------- */
+.item-tile-tarif {
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(30, 19, 43, 0.20);
+	line-height: (25/18);
+	font-weight: bold;
+	color: var(--clr-base);
+	text-transform: uppercase;
+	padding: 12px 24px 12px 6.5rem;
+	.tile-title {
+		display: block;
+		flex: 1;
+		padding-right: 10px;
+		font-size: 1em;
+	}
+	.tile-value {
+		display: block;
+		flex-shrink: 0;
+		font-size: (18/16em);
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background: url(../img/icons/check.svg) center no-repeat;
+		background-size: 100% auto;
+		top: 50%;left: 3.5rem;
+		margin: -10px 0 0 -10px;
+	}
+}
+.item-tile-step {
+	line-height: (20/16);
+	color: rgba(255, 255, 255, 0.70);
+	display: block;
+	position: relative;
+	padding-left: 9rem;
+	padding-top: 1rem;
+	.tile-number {
+		display: block;
+		width: 9rem;
+		position: absolute;
+		top: 0;left: 0;
+		font-size: 10rem;
+		line-height: 1;
+		font-weight: bold;
+		background: var(--Linear, linear-gradient(90deg, #8968EA 0%, #9881EF 50.17%, #CA88F3 100%));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		overflow: hidden;
+	}
+	.tile-title {
+		color: var(--clr-base);
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+}
+.item-tile-info {
+	display: block;
+	position: relative;
+	text-align: center;
+	color: var(--clr-base);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	.tile-ico {
+		width: 6rem;height: 6rem;
+		margin: 0 auto;
+	}
+	.tile-title {
+		display: block;
+		margin: 30px auto 0 auto;
+		font-weight: bold;
+		max-width: 10em;
+	}
+}
+:is([class^="item-tile"]) {
+    &:hover {
+        .elm-photo, .tile-photo {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+.elm-photo, .tile-photo {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 1;
+    //transform: translateZ(0);
+    &.photo-main {
+        border: 1px solid #f00;
+        width: 300px;
+        height: 300px;
+    }
+    &:before {
+        content: "";
+        display: none;
+        padding-top: 100%;
+    }
+    img {
+        display: block;
+        position: relative;
+        width: 100%;
+        transition: all ease-out 1s;
+    }
+    &.photo-cover {
+        &:before {
+            display: block;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &.photo-contain {
+        &:before {
+            display: block;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+@supports (aspect-ratio: 1) {
+    .elm-photo, .tile-photo {
+        &:not(.photo-cover, .photo-contain) {
+            aspect-ratio: inherit !important;
+        }
+    }
+    .photo-cover, .photo-contain {
+        aspect-ratio: 1;
+        &:before {
+            display: none !important;
+        }
+    }
+}
+.elm-price, .tile-price {
+    white-space: nowrap;
+    &.price-old {
+        text-decoration: line-through;
+    }
+}
+[data-unit] {
+    &:after {
+        content: attr(data-unit);
+        font-family: 'Arial', 'Roboto', 'Open Sans', sans-serif;
+    }
+}
+.elm-ico, .button-ico, .menu-ico, .frm-ico, .tab-ico, .tile-ico, .lbl-ico {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    img, [class*="icon-"], .i, svg {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.elm-overlay {
+    display: none;
+    animation: fadein ease 0.2s;
+    background: fade(#000, 80);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 120;
+    &.active {
+        display: block;
+    }
+}
+.elm-sticker, .tile-sticker {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	background: #000;
+	height: 27px;
+	line-height: 27px;
+	border-radius: 5px;
+	padding: 0 12px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+@media (max-width: 1399px) {
+}
+@media (max-width: 1023px) {
+	.item-tile-info {
+		font-size: 15px;
+	}
+	.item-tile-step {
+		padding-left: 6rem;
+		.tile-number {
+			font-size: 6rem;
+		}
+	}
+}
