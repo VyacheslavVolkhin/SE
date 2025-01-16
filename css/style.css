@@ -1202,8 +1202,7 @@ html.with-fancybox body.hide-scrollbar {
       flex-direction: column;
   background-color: #030404;
 }
-.top-outer-box:after,
-.top-outer-box:before {
+.top-outer-box:after {
   content: "";
   display: block;
   position: absolute;
@@ -1213,7 +1212,7 @@ html.with-fancybox body.hide-scrollbar {
   width: 100dvw;
   min-width: var(--min);
   transform: translateX(-50%);
-  background: url(../img/main/light.jpg) center top no-repeat;
+  background: #030404 url(../img/main/light.jpg) center top no-repeat;
   background-size: auto 100%;
   z-index: -2;
 }
