@@ -6,6 +6,20 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	//mobile menu
+	const menuButton = document.querySelectorAll('.popup-menu-wrap li a');
+	for (i = 0;i < menuButton.length;i++) {
+		menuButton[i].addEventListener('click', function(e) {
+			if (this.parentElement.classList.contains('submenu')) {
+				this.parentElement.classList.toggle('open')
+				e.preventDefault()
+				e.stopPropagation()
+				return false
+			}
+		})
+	}
+
+
 	//js popup wrap
 	const togglePopupButtons = document.querySelectorAll('.js-btn-popup-toggle')
 	const closePopupButtons = document.querySelectorAll('.js-btn-popup-close')

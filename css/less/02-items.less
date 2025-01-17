@@ -1,6 +1,67 @@
 /* ----------------------------------- *\
 			items styles
 \* ----------------------------------- */
+.item-tile-cnt {
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100%;
+	border-radius: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(30, 19, 43, 0.20);
+	padding: 3.4rem 16.6rem 4.2rem 4rem;
+	.tile-info-wrap {
+		display: block;
+		width: 100%;
+		flex: 1;
+		padding-bottom: 24px;
+		position: relative;
+		z-index: 2;
+	}
+	.tile-action-wrap {
+		display: block;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 2;
+	}
+	.tile-photo {
+		width: 31rem;
+		position: absolute;
+		bottom: 0;right: 5px;
+	}
+	.tile-title {
+		margin-bottom: 12px;
+	}
+	.tile-soc-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -1rem;
+		.btn-action-ico {
+			margin: 0 1rem 2rem 1rem;
+			flex-shrink: 0;
+		}
+	}
+	&.tile-second {
+		.tile-photo {
+			width: 25.8rem;
+		}
+	}
+	&.tile-soc {
+		display: block;
+		padding: 3.4rem 4rem 2rem 4rem;
+		text-align: center;
+		.tile-info-wrap {
+			padding-bottom: 10px;
+		}
+		.tile-title {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: (680/16em);
+		}
+	}
+}
 .item-tile-tarif {
 	display: flex;
 	align-items: center;
@@ -219,7 +280,48 @@
 	font-weight: bold;
 	color: #fff;
 }
-@media (max-width: 1399px) {
+.elm-check, .elm-cross {
+	display: block;
+	position: relative;
+	width: 24px;height: 24px;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 24px auto;
+	}
+}
+.elm-check {
+	&:before {
+		background-image: url(../img/icons/succefull.svg);
+	}
+}
+.elm-cross {
+	&:before {
+		background-image: url(../img/icons/cross.svg);
+	}
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+	.item-tile-cnt {
+		position: relative;
+		overflow: hidden;
+		padding-right: 4rem;
+		.tile-photo {
+			width: 200px;
+			right: -20px;
+		}
+		&.tile-second {
+			.tile-photo {
+				width: 200px;
+			}
+		}
+	}
 }
 @media (max-width: 1023px) {
 	.item-tile-info {
@@ -229,6 +331,33 @@
 		padding-left: 6rem;
 		.tile-number {
 			font-size: 6rem;
+		}
+	}
+}
+@media (max-width: 639px) {
+	.item-tile-cnt {
+		position: relative;
+		overflow: hidden;
+		padding-right: 4rem;
+		.tile-photo {
+			width: 200px;
+			right: -20px;
+		}
+		&.tile-second {
+			.tile-photo {
+				width: 200px;
+			}
+		}
+	}
+}
+@media (max-width: 479px) {
+	.item-tile-cnt {
+		padding: 20px;
+		&.tile-second {
+			padding: 20px;
+		}
+		.tile-photo {
+			display: none;
 		}
 	}
 }

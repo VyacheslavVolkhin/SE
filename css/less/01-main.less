@@ -157,15 +157,151 @@ h6, .h6-title {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: var(--clr-base);
-	&:hover {
-		color: var(--clr-base);
-		opacity: 0.7;
-	}
+	
 	&.color-second {
 		background: linear-gradient(90deg, #FF8008 0%, #FFC837 100%);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+}
+a.link-att {
+	&:hover {
+		color: var(--clr-base);
+		opacity: 0.7;
+	}
+}
+table {
+	width: 100%;
+	font-size: 14px;
+	line-height: (16/14em);
+	border-spacing: 0 10px;
+	border-collapse: separate;
+	tbody {
+		tr {
+			position: relative;
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: -1;
+				border-radius: 25px;
+				background: #ffffff05;
+			}
+		}
+	}
+	thead {
+		tr, th {
+			text-align: left;
+			font-size: 13px;
+			line-height: 16px;
+			color: #ffffff50;
+			padding: 16px 18px 16px 24px;
+		}
+	}
+	th, td {
+		padding: 18px 18px 18px 24px;
+		align-items: center;
+	}
+	b {
+		font-weight: 500;
+	}
+	.elm-check, .elm-cross {
+		margin: 0 auto;
+	}
+	&:has(thead th.text-center:nth-child(1)) {
+		tbody {
+			th, td {
+				&:nth-child(1) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(2)) {
+		tbody {
+			th, td {
+				&:nth-child(2) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(3)) {
+		tbody {
+			th, td {
+				&:nth-child(3) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(4)) {
+		tbody {
+			th, td {
+				&:nth-child(4) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(5)) {
+		tbody {
+			th, td {
+				&:nth-child(5) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(6)) {
+		tbody {
+			th, td {
+				&:nth-child(6) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(7)) {
+		tbody {
+			th, td {
+				&:nth-child(7) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(8)) {
+		tbody {
+			th, td {
+				&:nth-child(8) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(9)) {
+		tbody {
+			th, td {
+				&:nth-child(9) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&:has(thead th.text-center:nth-child(10)) {
+		tbody {
+			th, td {
+				&:nth-child(10) {
+					text-align: center;
+				}
+			}
+		}
 	}
 }
 @media (max-width: 1399px) {

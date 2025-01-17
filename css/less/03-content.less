@@ -1,6 +1,73 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.table-box {
+	margin-bottom: 8rem;
+	.tbl-action-wrap {
+		text-align: center;
+		font-size: 15px;
+		margin-top: 34px;
+	}
+	.box-inner-wrap {
+		border-radius: 5px;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		background: rgba(30, 19, 43, 0.20);
+		padding: 30px;
+	}
+	.tbl-inner-wrap {
+		display: block;
+		position: relative;
+		margin-left: -30px;
+		margin-right: -30px;
+		padding-left: 30px;
+		padding-right: 30px;
+		overflow-x: auto;
+		overflow-y: hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	}
+	table {
+		min-width: 1000px;
+		margin: 0;
+	}
+	.btn-action {
+		display: inline-flex;
+		align-items: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		color: #9E9E9E;
+		&:hover {
+			color: var(--clr-base);
+			.button-ico {
+				opacity: 1;
+			}
+		}
+		.button-ico {
+			opacity: 0.5;
+			margin-right: 1rem;
+			width: 24px;height: 24px;
+			flex-shrink: 0;
+		}
+	}
+}
+.contacts-box {
+	margin-bottom: 10rem;
+	.items-wrap {
+		margin: 0 -1.5rem -3rem -1.5rem;
+	}
+	.item-wrap {
+		padding: 0 1.5rem;
+		margin-bottom: 3rem;
+		width: 50%;
+	}
+	.wrap-main {
+		width: 100%;
+	}
+}
 .info-terms-box {
 	padding: 8rem 0 0 0;
 	font-size: (18/16em);
@@ -383,6 +450,9 @@
 .title-box {
 	text-align: center;
 	margin-bottom: 32px;
+	&.title-left {
+		text-align: left;
+	}
 }
 .breadcrumbs-box {
 	font-size: 14px;
@@ -456,7 +526,7 @@
 		}
 	}
 }
-@media (max-width: 1199px) {
+@media   (max-width: 1199px) {
 	.info-tarifs-box {
 		.title-inner-wrap {
 			margin-bottom: 24px;
@@ -473,6 +543,11 @@
 	}
 }
 @media (max-width: 1023px) {
+	.contacts-box {
+		.item-wrap {
+			width: 100%;
+		}
+	}
 	.main-slider-box {
 		.item-wrap {
 			width: 33.33%;
