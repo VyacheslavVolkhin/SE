@@ -325,6 +325,122 @@
 		max-width: (740/32em);
 	}
 }
+.form-box {
+	margin: 0 auto -80px auto;
+	max-width: 396px;
+	.frm-row, .frm-row-submit {
+		margin: 0 -5px;
+	}
+	.frm-row-submit {
+		padding-top: 20px;
+	}
+	.frm-field {
+		padding: 0 5px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.field-button {
+		margin-bottom: 22px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.btn {
+			width: 100%;
+			height: 50px;
+			border-radius: 25px;
+			font-size: 14px;
+			padding: 0 10px;
+		}
+	}
+	.field-info {
+		margin: 0;
+		text-align: center;
+		font-size: 13px;
+		line-height: 16px;
+		color: #ffffff50;
+		a {
+			&:not(:hover) {
+				color: inherit;
+			}
+		}
+	}
+	.field-links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 16px;
+		padding-top: 10px;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.field-link {
+		display: block;
+		position: relative;
+	}
+}
+.title-box {
+	text-align: center;
+	margin-bottom: 32px;
+}
+.breadcrumbs-box {
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(255, 255, 255, 0.70);
+	margin-bottom: 26px;
+	position: relative;
+	.menu {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -24px 0 0;
+		li {
+			flex-shrink: 0;
+			padding: 0 24px 0 0;
+			max-width: 100%;
+			&:after {
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				background: url(../img/icons/arrow-bread.svg) center no-repeat;
+				background-size: 100% auto;
+				top: 50%;
+				right: 0px;
+				margin-top: -12px;
+			}
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	a {
+		color: inherit;
+		&:hover {
+			color: var(--clr-base);
+		}
+	}
+	.link-home {
+		display: block;
+		width: 24px;height: 24px;
+		position: relative;
+		overflow: hidden;
+		&:before {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			background: url(../img/icons/home.svg) center no-repeat;
+			background-size: 100% auto;
+			top: 50%;left: 50%;
+			margin: -12px 0 0 -12px;
+		}
+	}
+}
 @media (max-width: 1369px) {
 	.main-slider-box {
 		.item-wrap {

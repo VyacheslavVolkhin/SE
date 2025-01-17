@@ -1,11 +1,26 @@
 /* ----------------------------------- *\
 			inputs elements styles
 \* ----------------------------------- */
+[placeholder]::-webkit-input-placeholder {color: var(--clr-base);}
+[placeholder]:-moz-placeholder {color: var(--clr-base);}
+[placeholder]::-moz-placeholder {color: var(--clr-base);}
+[placeholder]:-ms-input-placeholder {color: var(--clr-base);}
 .form-input[placeholder] {
     text-overflow: ellipsis;
 }
 .form-input {
     text-overflow: ellipsis;
+	height: 50px;
+	border-radius: 25px;
+	background: #ffffff05;
+	border: 1px solid #ffffff05;
+	padding: 0 10px 0 24px;
+	font-size: 16px;
+	color: var(--clr-base);
+	transition: all ease 0.2s;
+	&:hover, &:focus {
+		background: #ffffff10;
+	}
 }
 textarea.form-input {
 

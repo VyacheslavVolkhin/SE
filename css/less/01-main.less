@@ -126,7 +126,10 @@ h6, .h6-title {
 	letter-spacing: normal;
 }
 .h2-title, h2 {
-
+	font-size: 16px;
+	line-height: (20/16);
+	text-transform: uppercase;
+	font-weight: bold;
 }
 .h3-title, h3 {
 	font-size: 1em;
@@ -147,6 +150,23 @@ h6, .h6-title {
 }
 .text-center, .title-center {
     text-align: center;
+}
+.link-att {
+	background: linear-gradient(90deg, #8968EA 0%, #9881EF 50.17%, #CA88F3 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: var(--clr-base);
+	&:hover {
+		color: var(--clr-base);
+		opacity: 0.7;
+	}
+	&.color-second {
+		background: linear-gradient(90deg, #FF8008 0%, #FFC837 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 }
 @media (max-width: 1399px) {
     :root {

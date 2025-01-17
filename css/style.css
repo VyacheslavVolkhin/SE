@@ -172,6 +172,13 @@ h1 {
   font-weight: 800;
   letter-spacing: normal;
 }
+.h2-title,
+h2 {
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 .h3-title,
 h3 {
   font-size: 1em;
@@ -196,6 +203,23 @@ h3 {
 .text-center,
 .title-center {
   text-align: center;
+}
+.link-att {
+  background: linear-gradient(90deg, #8968EA 0%, #9881EF 50.17%, #CA88F3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--clr-base);
+}
+.link-att:hover {
+  color: var(--clr-base);
+  opacity: 0.7;
+}
+.link-att.color-second {
+  background: linear-gradient(90deg, #FF8008 0%, #FFC837 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1399px) {
   :root {
@@ -736,6 +760,11 @@ html.with-fancybox body.hide-scrollbar {
   .popup-menu-wrap .btn-menu:before {
     left: 15px;
     right: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrap-inner .header {
+    padding-bottom: 20px;
   }
 }
 /* ----------------------------------- *\
@@ -1405,6 +1434,127 @@ html.with-fancybox body.hide-scrollbar {
   margin-right: auto;
   max-width: 23.125em;
 }
+.form-box {
+  margin: 0 auto -80px auto;
+  max-width: 396px;
+}
+.form-box .frm-row,
+.form-box .frm-row-submit {
+  margin: 0 -5px;
+}
+.form-box .frm-row-submit {
+  padding-top: 20px;
+}
+.form-box .frm-field {
+  padding: 0 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.form-box .field-button {
+  margin-bottom: 22px;
+}
+.form-box .field-button:last-child {
+  margin-bottom: 0;
+}
+.form-box .field-button .btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.form-box .field-info {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ffffff50;
+}
+.form-box .field-info a:not(:hover) {
+  color: inherit;
+}
+.form-box .field-links {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  padding-top: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.form-box .field-link {
+  display: block;
+  position: relative;
+}
+.title-box {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.breadcrumbs-box {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 26px;
+  position: relative;
+}
+.breadcrumbs-box .menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -24px 0 0;
+}
+.breadcrumbs-box .menu li {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 0 24px 0 0;
+  max-width: 100%;
+}
+.breadcrumbs-box .menu li:after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: url(../img/icons/arrow-bread.svg) center no-repeat;
+  background-size: 100% auto;
+  top: 50%;
+  right: 0px;
+  margin-top: -12px;
+}
+.breadcrumbs-box .menu li:last-child:after {
+  display: none;
+}
+.breadcrumbs-box a {
+  color: inherit;
+}
+.breadcrumbs-box a:hover {
+  color: var(--clr-base);
+}
+.breadcrumbs-box .link-home {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.breadcrumbs-box .link-home:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: url(../img/icons/home.svg) center no-repeat;
+  background-size: 100% auto;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+}
 @media (max-width: 1369px) {
   .main-slider-box .item-wrap {
     width: 25%;
@@ -1493,11 +1643,35 @@ html.with-fancybox body.hide-scrollbar {
 /* ----------------------------------- *\
 			inputs elements styles
 \* ----------------------------------- */
+[placeholder]::-webkit-input-placeholder {
+  color: var(--clr-base);
+}
+[placeholder]:-moz-placeholder {
+  color: var(--clr-base);
+}
+[placeholder]::-moz-placeholder {
+  color: var(--clr-base);
+}
+[placeholder]:-ms-input-placeholder {
+  color: var(--clr-base);
+}
 .form-input[placeholder] {
   text-overflow: ellipsis;
 }
 .form-input {
   text-overflow: ellipsis;
+  height: 50px;
+  border-radius: 25px;
+  background: #ffffff05;
+  border: 1px solid #ffffff05;
+  padding: 0 10px 0 24px;
+  font-size: 16px;
+  color: var(--clr-base);
+  transition: all ease 0.2s;
+}
+.form-input:hover,
+.form-input:focus {
+  background: #ffffff10;
 }
 select.form-input {
   display: block;
