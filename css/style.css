@@ -708,14 +708,17 @@ html.with-fancybox body.hide-scrollbar {
   position: relative;
   z-index: 2;
 }
-.header-lk .popup-menu-wrap .menu ul a:hover {
+.header-lk .popup-menu-wrap .menu ul a:hover:not(.active) {
   background: linear-gradient(90deg, #FF8008 0%, #FFC837 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.header-lk .popup-menu-wrap .menu ul a.active:before {
+.header-lk .popup-menu-wrap .menu ul a.active:after {
   opacity: 1;
+}
+.header-lk .popup-menu-wrap .menu ul a.active:hover {
+  color: #fff;
 }
 .header-lk .popup-menu-wrap .menu ul a:after {
   content: "";

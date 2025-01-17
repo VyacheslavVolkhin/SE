@@ -299,14 +299,19 @@ html.with-fancybox body.hide-scrollbar {
 					position: relative;
 					z-index: 2;
 					&:hover {
-						background: linear-gradient(90deg, #FF8008 0%, #FFC837 100%);
-						background-clip: text;
-						-webkit-background-clip: text;
-						-webkit-text-fill-color: transparent;
+						&:not(.active) {
+							background: linear-gradient(90deg, #FF8008 0%, #FFC837 100%);
+							background-clip: text;
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
 					}
 					&.active {
-						&:before {
+						&:after {
 							opacity: 1;
+						}
+						&:hover {
+							color: #fff;
 						}
 					}
 					&:after {
