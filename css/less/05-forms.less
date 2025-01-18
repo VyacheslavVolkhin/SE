@@ -1,6 +1,72 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.field-title {
+	display: block;
+	font-size: 13px;
+	line-height: 16px;
+	color: #ffffff50;
+	margin-bottom: 16px;
+}
+.frm-field-range {
+	display: flex;
+	.field-range {
+		width: 50%;
+		flex-shrink: 0;
+		padding: 0 1rem 0 0;
+		&:last-child {
+			padding: 0 0 0 1rem;
+		}
+	}
+}
+.frm-field-select {
+	display: block;
+	position: relative;
+	line-height: 1;
+	&.select-att {
+		.btn-select.form-input {
+			border-color: #fff;
+			font-weight: 500;
+		}
+	}
+	.select-content-block {
+		display: none;
+		background: #fff;
+		border-radius: 0 0 20px 20px;
+		position: absolute;
+		top: 100%;left: 0;right: 0;
+		z-index: 10;
+		border: 1px solid #ffffff05;
+		padding: 0 5px 15px 5px;
+	}
+	.menu {
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	}
+	.btn-select-menu {
+		display: block;
+		position: relative;
+		font-size: 16px;
+		line-height: 20px;
+		padding: 2px 20px;
+		color: #060606;
+		transition: all ease 0.2s;
+		&:hover {
+			color: #060606;
+			background-color: #9E9E9E20;
+		}
+		&.active {
+			display: none;
+		}
+	}
+}
 .frm-row,
 .frm-field,
 .frm-row-submit {

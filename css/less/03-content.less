@@ -1,6 +1,57 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.lk-form-box {
+	margin-bottom: 8rem;
+	.box-inner-wrap {
+		margin-bottom: 4.5rem;
+		border-radius: 5px;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		background: rgba(30, 19, 43, 0.20);
+		padding: 28px 3rem 7px 3rem;
+	}
+	.frm-row-submit,
+	.frm-row {
+		margin: 0 -1rem;
+		align-items: flex-end;
+	}
+	.frm-field {
+		padding: 0 1rem;
+		margin-bottom: 2.8rem;
+		&:has(.button-reset) {
+			text-align: center;
+		}
+	}
+	.field-third {
+		width: 33.33%;
+	}
+	.field-sep {
+		flex: 1;
+		width: auto;
+	}
+	.frm-row-submit {
+		.frm-field-select {
+			min-width: 270px;
+		}
+		.frm-field {
+			width: auto;
+		}
+		.btn {
+			height: 50px;
+			padding: 0 30px;
+			.button-ico {
+				margin: 0 10px;
+				width: 20px;height: 20px;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
 .table-box {
 	margin-bottom: 8rem;
 	.tbl-action-wrap {
@@ -527,6 +578,11 @@
 	}
 }
 @media   (max-width: 1199px) {
+	.lk-form-box {
+		.field-third {
+			width: 50%;
+		}
+	}
 	.info-tarifs-box {
 		.title-inner-wrap {
 			margin-bottom: 24px;
@@ -565,6 +621,27 @@
 	
 }
 @media (max-width: 767px) {
+	.lk-form-box {
+		.frm-row-submit {
+			.frm-field {
+				width: 33.33%;
+				&:has(.frm-field-select) {
+					width: 66.66%;
+				}
+			}
+			.field-sep {
+				display: none;
+			}
+			.btn {
+				width: 100%;
+				padding: 0 10px;
+			}
+			.frm-field-select {
+				min-width: 0;
+				width: 100%;
+			}
+		}
+	}
 	.info-terms-box {
 		.box-inner-wrap {
 			display: block;
@@ -611,7 +688,32 @@
 		}
 	}
 }
+@media (max-width: 639px) {
+	.lk-form-box {
+		.frm-field {
+			width: 100%;
+		}
+		.frm-row-submit {
+			.frm-field {
+				width: 50%;
+				&:has(.frm-field-select) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
 @media (max-width: 479px) {
+	.lk-form-box {
+		.frm-row-submit {
+			.frm-field {
+				width: 100%;
+				&:has(.frm-field-select) {
+					width: 100%;
+				}
+			}
+		}
+	}
 	.main-slider-box {
 		.item-wrap {
 			width: 50%;

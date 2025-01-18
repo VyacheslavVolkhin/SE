@@ -19,9 +19,49 @@
 	color: var(--clr-base);
 	transition: all ease 0.2s;
 	&:hover, &:focus {
-		background: #ffffff10;
+		background-color: var(--clr-base);
+		color: #060606;
+		&[placeholder]::-webkit-input-placeholder {color: #060606;}
+		&[placeholder]:-moz-placeholder {color: #060606;}
+		&[placeholder]::-moz-placeholder {color: #060606;}
+		&[placeholder]:-ms-input-placeholder {color: #060606;}
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&.btn-select {
+		display: flex;
+		align-items: center;
+		padding-right: 50px;
+		&.active {
+			border-radius: 20px 20px 0 0;
+			&:before {
+				rotate: 180deg;
+			}
+		}
+		&:before {
+			content: "";
+			display: block;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			background: url(../img/icons/arrow-select.svg) center no-repeat;
+			background-size: 100% auto;
+			top: 25px;right: 33px;
+			margin: -8px -8px 0 0;
+			transition: all ease 0.2s;
+		}
+		.button-title {
+			display: block;
+			position: relative;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 	}
 }
+
 textarea.form-input {
 
 }
@@ -29,10 +69,9 @@ select.form-input {
     display: block;
     text-overflow: ellipsis;
     width: 100%;
-    padding-right: 30px;
+    padding-right: 50px;
     background-image: url(../img/icons/arrow-select.svg);
     background-position: right 20px center;
-    background-color: #fff;
     background-repeat: no-repeat;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -43,6 +82,9 @@ select.form-input {
     //text-overflow: '';
     outline: none;
 	cursor: pointer;
+	&:hover {
+		color: #060606;
+	}
     &.form-input-clear {
         height: auto;
         border: none;
@@ -66,12 +108,11 @@ select.form-input {
 select::-ms-expand {
     display: none;
 }
-//   <select class="form-input form-input-line" required>
-//       <option value="" disabled selected hidden>Выбрать</option>
-//       <option>Пункт списка</option>
-//   </select>
 select.form-input:required:invalid {
-    color: #ADADAD;
+    color: var(--clr-base);
+	&:hover {
+		color: #060606;
+	}
 }
 .btn {
 	height: 48px;
@@ -173,6 +214,38 @@ select.form-input:required:invalid {
 			width: 20px;height: 20px;
 			filter: none
 		}
+	}
+	&.button-reset {
+		width: auto;
+		height: 50px;
+		padding: 0;
+		min-width: 0;
+		background: none;
+		border: none;
+		border-radius: 0;
+		font-weight: inherit;
+		font-size: 15px;
+		line-height: 24px;
+		letter-spacing: 0.75px;
+		font-weight: 800;
+		color: #9E9E9E;
+		&:before, &:after {
+			display: none;
+		}
+		&:hover {
+			border: none;
+			background: none;
+			color: var(--clr-base);
+			.button-ico {
+				opacity: 1;
+			}
+		}
+		.button-ico {
+			opacity: 0.7;
+			margin: 0 2px 0 0;
+			filter: none;
+		}
+
 	}
     &.button-border {
         &:not(:hover) {
